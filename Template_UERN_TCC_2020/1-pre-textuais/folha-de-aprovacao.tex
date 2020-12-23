@@ -1,0 +1,57 @@
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+%\includepdf{1-pre-textuais/FolhaAprovacaoAssinada.pdf}
+
+
+%ajusta tamanho linha textual horizontal se necessário
+\setlength{\ABNTEXsignwidth}{15cm} 
+
+%coloque 1pt se desejar linha. Comumente, linha de assinatura é utilizada para pessoas não letradas.
+\setlength{\ABNTEXsignthickness}{1pt} 
+
+%espaçamento entre assinaturas
+\setlength{\ABNTEXsignskip}{1.5cm} 
+
+
+\begin{folhadeaprovacao}
+	\begin{center} 
+		\ABNTEXchapterfont\MakeUppercase\imprimirautor
+
+        \vspace*{\fill}
+        \begin{center}
+         	\ABNTEXchapterfont\MakeUppercase\imprimirtitulo
+        \end{center}
+        \vspace*{\fill}
+
+		\hspace{.45\textwidth} 
+		\begin{minipage}{.5\textwidth}
+			\imprimirpreambulo
+		\end{minipage}
+		\vspace*{\fill}
+    \end{center}
+    
+    Aprovado em~\defesadatacompletacomdiadasemana.
+    \vspace*{\fill}
+    
+%\the\year.
+    
+    \begin{center}
+        Banca examinadora
+    \end{center}
+    
+	\assinatura{\proforientador~(Orientador)\\{\proforientadorInstituicao}}
+	%\assinatura{\imprimircoorientador\\{\footnotesize \profcoorientadortitulacao\\(Co-orientador UTFPR)}} 
+    
+    %\assinatura{\profpresidentebanca\\{\footnotesize \profpresidentebancatitulacao\\(Presidente da Banca UTFPR)}} 
+    \assinatura{\profbancaA\\{\profbancaAInstituicao}}
+    \assinatura{\profbancaB\\{\profbancaBInstituicao}}
+
+
+	\vspace*{\fill}
+	%\begin{center}
+	%\noindent Folha de Aprovação assinada encontra-se arquivada na Coordenação do %Curso.
+	%\end{center} 
+\end{folhadeaprovacao} 

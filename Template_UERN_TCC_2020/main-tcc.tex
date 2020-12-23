@@ -1,0 +1,292 @@
+% ------------------------------------------------------------------------
+% TCC_CC:   Modelo de Trabalho Monográfico Acadêmico UERN 
+%           para o curso de Bacharelado em Ciência da Computação
+%
+% Esse template é baseado no template 
+% desenvolvido por Francisco Reinaldo
+% Disponivel em: https://pt.overleaf.com/latex/templates/utfpr-modelo-tcc-monografia-dissertacao-tese-com-pdf-a-3b-versao-goldendragon/znzmpctjxmqq)
+%
+% Sendo modificado para se encaixar 
+% nos requisitos solicitados pela UERN no ano de 2020
+%
+% Caso você tenha caído de cabeça e não 
+% entenda nada de overleaf, peça ajuda a
+% quem indicou :P
+%
+% Ou der seus pulos e aprenda sozinho.
+% Dá um google ai.
+%
+% Mais para dar um colher de chá eu coloquei alguns tutoriais :)
+%
+% A maioria dos dados (fora os texto em si)
+% que você precisar modificar em relação ao o seu nome,
+% orientador, data, banca estão no arquivo 
+% dados-gerais dá uma olhada lá. Mas fique a 
+% vontade para editar como quiser :).
+%
+% Desenvolvido por: Althierfson Tullio O aluno
+%
+% Versao de Controle: v32 - Codinome Externo: GoldenDragon
+%
+% ------------------------------------------------------------------------
+
+
+% --- LianTze / Reinaldo´s Fine Tuning
+\RequirePackage{scrlfile}
+\AfterClass{memoir}{\usepackage[a-3b]{pdfx}} %v.3
+%Para funcionar, deixe na raiz: sRGB_IEC61966-2-1_black_scaled
+%\BeforePackage{hyperref}{\usepackage[a-3b]{pdfx}} %v.3.2
+% ---
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	oneside,			% para impressão em frente. Oposto a twoside (frente,costas)
+	a4paper,			% tamanho do papel. 
+	%sumario=tradicional,
+	% % -- opções da classe abntex2 --
+	chapter=TITLE, % títulos de capítulos convertidos em letras maiúsculas
+	%section=title,
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% --- 
+% PACOTES PARA AJUSTE e CORREÇÕES EM ABNTEX2
+% --- 
+\input{pacotes_oficiais}
+% ---
+
+\usepackage{fancyhdr}
+%\usepackage[margin=1.5cm]{caption}
+
+% --- 
+% DADOS BÁSICOS DE AUTORIA
+% --- 
+\input{dados-gerais}
+ 
+% --- 
+% CAPA
+% --- 
+\input{0-capa-e-rosto/capa}
+ 
+% --- 
+% FOLHA DE ROSTO
+% --- 
+\input{0-capa-e-rosto/prelogo.tex}
+
+% --- 
+% DADOS BÁSICOS DE AUTORIA EM ABNTEX, LOAD DE dados-gerais.tex
+% --- 
+\tipotrabalho{\tipotrabalhoescrito}
+\instituicao{UNIVERSIDADE DO ESTADO DO RIO GRANDE DO NORTE}
+\autor{\discente} 
+\titulo{\titulodissertacao} 
+\data{2020} % <-- Ano do trabalho
+\local{NATAL} % <-- localidade
+
+\orientador{\proforientador } % <-- Nome do orientador
+\coorientador{\profcoorientador} % <-- Nome do Co-Orientador (Opcional)
+
+% ---
+% COMPILA O INDICE
+% ---
+\makeindex
+
+
+\begin{document}
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+
+% ---
+% Folha de rosto
+% ---
+%\imprimirfolhaderosto
+\input{0-capa-e-rosto/folha-de-rosto}
+
+% imprimir ficha catalográfica PDF
+% \includepdf[pages={-}]{0-capa-e-rosto/FichaCatalografica.pdf}
+% ---
+% Inserir folha de aprovação
+% ---
+\input{1-pre-textuais/folha-de-aprovacao}
+
+% ---
+% Dedicatória
+% ---
+\input{1-pre-textuais/dedicatoria}
+
+% ---
+% Agradecimentos
+% ---
+\input{1-pre-textuais/agradecimentos}
+
+% ---
+% Epígrafe
+% ---
+\input{1-pre-textuais/epigrafe}
+
+
+% ---
+% RESUMOS
+% ---
+
+% Resumo em português
+\input{1-pre-textuais/resumo}
+
+% Resumo em inglês
+\input{1-pre-textuais/abstract}
+
+% ---
+% Lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+
+\cleardoublepage
+% ---
+
+% ---
+% Lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de quadros
+% ---
+%\pdfbookmark[0]{\listofquadrosname}{loq}
+%\listofquadros*
+%\cleardoublepage
+% ---
+
+% ---
+% Lista de Abreviaturas e Siglas
+% ---
+%\input{1-pre-textuais/lista-de-abreviaturas} 
+
+% ---
+% Lista de Símbolos
+% ---
+%\input{1-pre-textuais/lista-de-simbolos}
+
+% ---
+% Lista de Codigo-Fonte
+% ---
+%\pdfbookmark[0]{\listofcodigosname}{loc}
+%\listofcodigos*
+%\cleardoublepage
+% ---
+
+% ---
+% Sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{ \small{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+
+\input{2-textuais/1-introducao}
+\input{2-textuais/2-fundamentacao-teorica}
+\input{2-textuais/3-trabalhos-relacionados}
+\input{2-textuais/4-metodologia.tex}
+\input{2-textuais/5-Desenvolvimento}
+\input{2-textuais/7-conclusao}
+%\input{2-textuais/4-descricao_sistema.tex}
+%\input{2-textuais/6-resultados}
+
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+
+% ---
+% Conclusão
+% ---
+%\input{2-textuais/5-conclusao}
+
+% ---
+% Trabalhos Futuros
+% ---
+%\input{2-textuais/7-trabs-futuros}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ---
+% Referências
+% ---
+%\newpage
+%\renewcommand{\thepage}{}
+\bibliography{referencias-acervo.bib}
+
+%\begin{comment}
+% ---
+% Glossário
+% ---
+\input{3-pos-textuais/glossario}
+
+% ---
+% Apêndices
+% ---
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+\partapendices
+%\addcontentsline{toc}{section}{Seção Não Numerada}
+\input{3-pos-textuais/apendices}
+
+\end{apendicesenv}
+
+
+% ---
+% Anexos
+% ---
+\begin{comment}
+\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+\partanexos
+
+\input{3-pos-textuais/anexos}
+
+\end{anexosenv}
+\end{comment}
+% ---
+% INDICE REMISSIVO
+% ---
+\phantompart
+\printindex
+
+
+%---------------------------------------------------------------------
+%\end{comment}
+\end{document}

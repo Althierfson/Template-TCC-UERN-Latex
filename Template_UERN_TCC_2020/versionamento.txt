@@ -1,0 +1,9 @@
+% 16/11/17 versao2.7 PDF/A
+% 17/11/17 versao3 - Help from LianTze Lim!% 
+% 17/11/17 versao3.1 - Ajustes e limpeza
+% 18/11/17 versao3.2 - Help from LianTze Lim (better of the best!!) 
+% ...
+% 22/04/19 versao22 - GoldenDragon
+% ------------------------------------------------------------------------
+% Agradecimentos a Overleaf pela oportunidade e ao grupo abntex2!
+% ------------------------------------------------------------------------

@@ -1,0 +1,153 @@
+% ---------------DOCUMENTO INDEPENDENTE----------------------------------
+% TCC1..2: Modelo de Declaração de AUTORIA e TERMO para DEBIB
+% 
+% Template por Francisco Reinaldo 
+%		(https://orcid.org/0000-0001-6161-6755)
+%		(http://lattes.cnpq.br/7401534350061823)
+% v4. setembro 2019
+% ------------------------------------------------------------------------
+% Agradecimentos a Overleaf pela oportunidade 
+% ------------------------------------------------------------------------
+
+\documentclass[12pt]{article} 
+\usepackage[a4paper,left=30mm,right=25mm,top=25mm,bottom=25mm,headsep=15.5mm]{geometry} 
+
+\usepackage[brazil]{babel}                                 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+
+\renewcommand{\familydefault}{\sfdefault} 
+\usepackage{indentfirst,graphicx} 
+\usepackage[absolute]{textpos}
+
+%---------EXCLUSIVA ENTRADA DE DADOS PELO ALUNO-------
+\input{./dados-gerais.tex}
+
+%definir data conforme calendario do Prof. TCC
+\def \datadeentregadotrabalhoparadisciplina{25 de novembro de 2017 (Quinta-feira)} 
+%------------------------------------------------------
+
+
+\begin{document}
+\linespread{1} 
+%\pagestyle{myheadings}
+%\newpage \pagenumbering{arabic}
+
+% ---
+% DOC 1 - Autoria
+% ---
+\thispagestyle{empty} 
+
+\begin{center}
+    \begin{textblock*}{\linewidth}(3cm,1cm)%{width}[xt,yt](X,Y)
+    \centering
+     \includegraphics[width=\linewidth]{debib/logo.png}
+    \end{textblock*} ~\\[1em]
+\end{center}
+
+\vspace{\fill}
+\begin{center}
+\begin{large}
+\textbf{DECLARAÇÃO DE AUTORIA}
+\end{large}
+\end{center}
+
+\vspace{\fill}  
+
+\begin{description} 
+\item[Autor] \discente
+\item[CPF] \cpf  
+\item[Código de matrícula] \RAouMatricula
+\item[Telefone] \telefonecomDDD 
+\item[e-mail] \email
+\item[Curso/Programa de Pós-graduação] Licenciatura em Informática
+\item[Orientador] \proforientador
+\item[Co-orientador] \profcoorientador
+\item[Data da defesa] \defesadatacompletacomdiadasemana
+\item[Título/subtítulo] \titulotrabalho
+\item[Tipo de produção intelectual] TCC - Trabalho de Conclusão de Curso 
+\end{description}
+
+\vspace{\fill}
+
+Declaro, para os devidos fins, que o presente trabalho é de minha autoria e que estou ciente:
+\begin{itemize}\setlength\itemsep{.02em}
+\item  dos Artigos 297 a 299 do Código Penal, Decreto-Lei n. 2.848 de 7 de dezembro de 1940;
+\item  da Lei n. 9.610, de 19 de fevereiro de 1998, sobre os Direitos Autorais,
+\item  do Regulamento Disciplinar do Corpo Discente da UTFPR; e
+\item  que plágio consiste na reprodução de obra alheia e submissão da mesma como trabalho próprio ou na inclusão, em trabalho próprio, de ideias, textos, tabelas ou ilustrações (quadros, figuras, gráficos, fotografias, retratos, lâminas, desenhos, organogramas, fluxogramas, plantas, mapas e outros) transcritos de obras de terceiros sem a devida e correta citação da referência.
+\end{itemize}
+
+\vspace{\fill}
+
+\hspace{\fill} Francisco Beltrão-PR, \today.
+
+\vspace{4em}
+
+\begin{center}
+\linespread{1} \small 
+\textbf{\discente\\(Assinatura do Autor)}
+\end{center}
+
+\pagebreak 
+
+% ---
+% DOC 2 - Termo
+% ---
+\thispagestyle{empty} 
+
+\begin{center}
+    \begin{textblock*}{\linewidth}(3cm,1cm)%{width}[xt,yt](X,Y)
+    \centering
+     \includegraphics[width=\linewidth]{debib/logo.png}
+    \end{textblock*} ~\\[1em]
+\end{center}
+
+\begin{center}
+\begin{large}
+\textbf{\small TERMO DE AUTORIZAÇÃO PARA PUBLICAÇÃO DE TRABALHOS DE CONCLUSÃO DE CURSO DE GRADUAÇÃO E ESPECIALIZAÇÃO, DISSERTAÇÕES E TESES NO PORTAL DE INFORMAÇÃO E NOS CATÁLOGOS ELETRÔNICOS DO SISTEMA DE BIBLIOTECAS DA UTFPR}
+\end{large}
+\end{center}
+
+Na qualidade de titular dos direitos de autor da publicação, autorizo a UTFPR a veicular, através do Portal de Informação (PIA) e dos Catálogos das Bibliotecas desta Instituição, sem ressarcimento dos direitos autorais, de acordo com a Lei n${}^{o}$ 9.610/98, o texto da obra abaixo citada, observando as condições de disponibilização no item 4, para fins de leitura, impressão e/ou \textit{download}, visando a divulgação da produção científica brasileira.
+
+\paragraph{1. Tipo de produção intelectual} TCC - Trabalho de Conclusão de Curso 
+
+\paragraph{2. Identificação da obra:} {~}
+\begin{flushleft}
+\linespread{1.3} \selectfont
+\noindent\textbf{Autor} \discente \\ 
+\textbf{RG} \rg \hspace{2em} \textbf{CPF} \cpf \hspace{2em}  \textbf{Telefone} \telefonecomDDD \\
+\textbf{e-mail} \email \\
+\textbf{Curso} Licenciatura em Informática \\
+\textbf{Orientador} \proforientador\\
+\textbf{Co-orientador} \profcoorientador\\
+\textbf{Data da defesa} \defesadatacompletacomdiadasemana\\
+\textbf{Título/subtítulo (português)} \titulotrabalho\\
+\textbf{Título/subtítulo (outro idioma)} \titulotrabalhoIngles\\
+\textbf{Área de conhecimento do CNPq} \areaCNPQ\\
+\textbf{Palavras-chave} \palavraschaves\\
+\textbf{Palavras-chave em outro idioma} \palavraschavesIngles\\
+\end{flushleft}
+
+\paragraph{3. Agência(s) de fomento (quando existir):} \agenciafomento
+\paragraph{4. Informações de disponibilização do documento} {~}
+\begin{flushleft}
+\linespread{1.3} \selectfont
+\textbf{Restrição para publicação}: \restricaopublicacao\\
+\textbf{Em caso de restrição total, especifique o por que da restrição} \restricaoTotal\\
+\textbf{Em caso de restrição parcial, especifique capítulo(s) restrito(s)} \restricaoParcial
+\end{flushleft}
+
+\vspace{2em}
+
+\hspace{\fill} Francisco Beltrão-PR, \today.
+
+\vspace{3em}
+
+
+\begin{center}
+\small 
+\textbf{(Assinatura do Autor) \hspace{8em} (Assinatura do Orientador)}
+\end{center}
+\end{document}
